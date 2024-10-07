@@ -22,6 +22,7 @@ This is a Hugo site with TailwindCSS, TypeScript, and Docker.
   - Tags & Categories templates
   - 404 template
   - Home page
+  - Changelog
 
 ## Placeholder README
 

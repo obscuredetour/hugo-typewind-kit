@@ -1,0 +1,39 @@
+{{ define "main" }}
+<article>
+  <div class="prose lg:prose-xl mt-10 mx-auto">
+    <h1>{{ .Title }}</h1>
+    <div class="flex">
+      <div class="flex-1">
+        <p class="text-sm text-gray-500">
+          {{ .Date.Format "January 2, 2006" }} by {{ .Params.author }}
+        </p>
+      <div class="flex-1">
+        <!-- Categories -->
+        {{ with .GetTerms "categories" }}
+          <ul class="flex">
+            {{ range . }}
+              <li class="text-sm text-gray-500">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+      <div class="flex-1">
+        <!-- Tags -->
+        {{ with .GetTerms "tags" }}
+          <ul class="flex">
+            {{ range . }}
+              <li class="text-sm text-gray-500">
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+  {{ .Content }}
+  </div>
+</article>
+{{ end }}

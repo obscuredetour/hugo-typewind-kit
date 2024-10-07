@@ -1,0 +1,20 @@
+<div class="flex">
+  <ul>
+    {{ range .Site.Menus.main }}
+      <li>
+        <a href="{{ .URL }}" class="block text-2xl text-gray-800 font-bold p-4">
+          {{ .Name }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+  <ul>
+    {{ range .Site.Menus.footer }}
+      <li>
+        <a href="{{ .URL }}" class="block text-2xl text-gray-800 font-bold p-4">
+          {{ .Name }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</div>

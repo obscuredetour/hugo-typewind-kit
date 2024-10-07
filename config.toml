@@ -1,0 +1,44 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Hugo + Tailwind CSS + TypeScript"
+metaDataFormat = "toml"
+
+[menus]
+  [[menus.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menus.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menus.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 3
+  [[menus.footer]]
+    name = "Privacy Policy"
+    url = "/privacy/"
+    weight = 1
+  [[menus.footer]]
+    name = "Terms of Service"
+    url = "/terms/"
+    weight = 2
+
+# [markup]
+#   [markup.highlight]
+#     noClasses = false
+
+# [build]
+#   writeStats = true
+
+# [module]
+#   [[module.mounts]]
+#     source = "assets"
+#     target = "assets"
+#   [[module.mounts]]
+#     source = "layouts"
+#     target = "layouts"
+#   [[module.mounts]]
+#     source = "static"
+#     target = "static"

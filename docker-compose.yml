@@ -1,0 +1,17 @@
+services:
+  dev:
+    build: .
+    ports:
+      - "1313:1313"
+    volumes:
+      - .:/app
+    environment:
+      HUGO_WATCH: "true"
+      HUGO_ENV: "development"
+    command: ["npm", "run", "dev"]
+
+  build:
+    build: .
+    volumes:
+      - .:/app
+    command: ["npm", "run", "build"]
